@@ -79,3 +79,48 @@ end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+vim.keymap.set('n', '<leader>t', ':split | terminal<CR>', { desc = 'Open terminal in split' })
+
+---------------------------------------------------------------------------
+-- 🔍 Plugin Enhancements Keymaps
+---------------------------------------------------------------------------
+
+-- Trouble.nvim (Diagnostics / Quickfix UI)
+vim.keymap.set('n', '<leader>tt', '<cmd>TroubleToggle<CR>', { desc = 'Toggle Trouble diagnostics', silent = true })
+
+-- Harpoon (Quick file navigation)
+vim.keymap.set('n', '<leader>ha', function() require('harpoon'):list():add() end, { desc = 'Add file to Harpoon list' })
+vim.keymap.set('n', '<leader>hh', function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end, { desc = 'Open Harpoon menu' })
+vim.keymap.set('n', '<leader>h1', function() require('harpoon'):list():select(1) end, { desc = 'Go to Harpoon file 1' })
+vim.keymap.set('n', '<leader>h2', function() require('harpoon'):list():select(2) end, { desc = 'Go to Harpoon file 2' })
+vim.keymap.set('n', '<leader>h3', function() require('harpoon'):list():select(3) end, { desc = 'Go to Harpoon file 3' })
+vim.keymap.set('n', '<leader>h4', function() require('harpoon'):list():select(4) end, { desc = 'Go to Harpoon file 4' })
+
+-- Spectre (Search & Replace across files)
+vim.keymap.set('n', '<leader>ss', '<cmd>lua require("spectre").open()<CR>', { desc = 'Search & Replace (Spectre)', silent = true })
+
+-- Todo-comments (Jump between TODO / FIX / NOTE)
+vim.keymap.set('n', ']t', function() require('todo-comments').jump_next() end, { desc = 'Next TODO comment' })
+vim.keymap.set('n', '[t', function() require('todo-comments').jump_prev() end, { desc = 'Previous TODO comment' })
+
+-- Symbols-outline (Code structure view)
+vim.keymap.set('n', '<leader>so', '<cmd>SymbolsOutline<CR>', { desc = 'Toggle Symbols Outline', silent = true })
+
+-- Trouble / Todo / Diagnostics quick access
+vim.keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<CR>', { desc = 'Diagnostics (Trouble)', silent = true })
+
+-- Noice message history (if using folke/noice)
+vim.keymap.set('n', '<leader>nm', '<cmd>Noice history<CR>', { desc = 'Show Noice message history', silent = true })
+
+-- Markdown Preview
+vim.keymap.set('n', '<leader>mp', '<cmd>MarkdownPreviewToggle<CR>', { desc = 'Toggle Markdown Preview', silent = true })
+
+-- Leap.nvim: no mapping required; uses default “s/S” motions.
+-- Flash.nvim: press <leader>s to invoke flash search.
+vim.keymap.set('n', '<leader>f', function() require('flash').jump() end, { desc = 'Flash jump (visual search)' })
+
+-- LSP Rename (using inc-rename.nvim)
+vim.keymap.set('n', '<leader>rn', function()
+  return ':IncRename ' .. vim.fn.expand('<cword>')
+end, { expr = true, desc = 'Incremental Rename Symbol' })

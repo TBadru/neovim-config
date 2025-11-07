@@ -28,6 +28,9 @@ require('lazy').setup {
   require 'plugins.alpha',
   require 'plugins.indent-blankline',
   require 'plugins.misc',
+  require 'plugins.lazygit',
+  require 'plugins.debug',
+  require 'plugins.enhancements',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
