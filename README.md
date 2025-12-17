@@ -2,7 +2,7 @@
 
 This repo contains my custom Neovim config, built on top of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). It's designed to provide a clean, modern setup with LSP support, autocomplete, formatting, and everything else you'd expect from a serious Neovim setup.
 
-Works with neovim v10.0 and above.
+Works with neovim v0.11.5 and above.
 
 ![my newovim ui](NeoVim.png)
 
