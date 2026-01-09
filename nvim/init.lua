@@ -31,6 +31,7 @@ require('lazy').setup {
   require 'plugins.lazygit',
   require 'plugins.debug',
   require 'plugins.enhancements',
+  require 'plugins.markdown-preview',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
