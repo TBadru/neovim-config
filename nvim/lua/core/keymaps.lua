@@ -114,7 +114,19 @@ vim.keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<CR>', { desc 
 vim.keymap.set('n', '<leader>nm', '<cmd>Noice history<CR>', { desc = 'Show Noice message history', silent = true })
 
 -- Markdown Preview
-vim.keymap.set('n', '<leader>mp', '<cmd>MarkdownPreviewToggle<CR>', { desc = 'Toggle Markdown Preview', silent = true })
+-- Markdown Preview (toggle)
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.keymap.set('n', '<leader>mp', function()
+      if vim.g.mkdp_preview_is_open == 1 then
+        vim.cmd('MarkdownPreviewStop')
+      else
+        vim.cmd('MarkdownPreview')
+      end
+    end, { buffer = true, desc = 'Toggle Markdown Preview', silent = true })
+  end,
+})
 
 -- Leap.nvim: no mapping required; uses default “s/S” motions.
 -- Flash.nvim: press <leader>s to invoke flash search.
