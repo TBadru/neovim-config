@@ -34,6 +34,7 @@ Works with neovim v0.11.5 and above , LuaJIT 2.1.1765228720
 │           ├── lazygit.lua
 │           ├── lsp.lua
 │           ├── lualine.lua
+│           ├── markdown-preview.lua
 │           ├── misc.lua
 │           ├── neotree.lua
 │           ├── statusline.lua
