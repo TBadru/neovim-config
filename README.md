@@ -4,6 +4,10 @@ This repo contains my custom Neovim config, built on top of [kickstart.nvim](htt
 
 Works with neovim v0.11.5 and above , LuaJIT 2.1.1765228720
 
+Lazygit Plugin requires [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+Markdown-preview Plugin requires [nodejs](https://github.com/nodejs/node)
+
 ![my newovim ui](NeoVim.png)
 
 
