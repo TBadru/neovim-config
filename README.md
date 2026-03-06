@@ -8,11 +8,13 @@ Lazygit Plugin requires [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 Markdown-preview Plugin requires [nodejs](https://github.com/nodejs/node)
 
+## 🖼️ Screenshot
+
 ![my newovim ui](NeoVim.png)
 
 
 
-## File Structure
+## 🚧 File Structure
 
 ```text
 ├── LICENSE
