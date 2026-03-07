@@ -91,7 +91,7 @@ return {
   -- 🧭 Navigation
   ---------------------------------------------------------------------------
   {
-    'ggandor/leap.nvim',
+    url = "https://codeberg.org/andyg/leap.nvim",
     event = 'VeryLazy',
     config = function()
       require('leap').add_default_mappings()
