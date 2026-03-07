@@ -82,9 +82,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 vim.keymap.set('n', '<leader>t', ':split | terminal<CR>', { desc = 'Open terminal in split' })
 
----------------------------------------------------------------------------
+
 -- 🔍 Plugin Enhancements Keymaps
----------------------------------------------------------------------------
+
 
 -- Trouble.nvim (Diagnostics / Quickfix UI)
 vim.keymap.set('n', '<leader>tt', '<cmd>TroubleToggle<CR>', { desc = 'Toggle Trouble diagnostics', silent = true })
